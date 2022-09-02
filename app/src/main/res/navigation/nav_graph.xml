@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/jobsAppliedFragment">
+
+    <fragment
+        android:id="@+id/jobsAppliedFragment"
+        android:name="com.job.wise.presentation.jobs.JobsFragment"
+        android:label="@string/jobs_applied"
+        tools:layout="@layout/fragment_jobs" >
+        <action
+            android:id="@+id/action_jobsAppliedFragment_to_modifyJobFragment"
+            app:destination="@id/modifyJobFragment" />
+        <action
+            android:id="@+id/action_jobsAppliedFragment_to_jobDetailsFragment"
+            app:destination="@id/jobDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/companiesFragment"
+        android:name="com.job.wise.presentation.company.CompaniesFragment"
+        android:label="@string/companies"
+        tools:layout="@layout/fragment_companies" >
+        <action
+            android:id="@+id/action_companiesFragment_to_modifyCompanyFragment"
+            app:destination="@id/modifyCompanyFragment" />
+        <action
+            android:id="@+id/action_companiesFragment_to_companyDetailsFragment"
+            app:destination="@id/companyDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/modifyCompanyFragment"
+        android:name="com.job.wise.presentation.company.ModifyCompanyFragment"
+        android:label="@string/modify_company"
+        tools:layout="@layout/fragment_modify_company" >
+        <argument
+            android:name="companyId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_modifyCompanyFragment_to_companiesFragment"
+            app:destination="@id/companiesFragment"
+            app:popUpTo="@id/companiesFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/modifyJobFragment"
+        android:name="com.job.wise.presentation.jobs.ModifyJobFragment"
+        android:label="@string/modify_job"
+        tools:layout="@layout/fragment_modify_job" >
+        <argument
+            android:name="jobId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_modifyJobFragment_to_jobsAppliedFragment"
+            app:destination="@id/jobsAppliedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/projectsFragment"
+        android:name="com.job.wise.presentation.project.ProjectsFragment"
+        android:label="fragment_projects"
+        tools:layout="@layout/fragment_projects" >
+        <action
+            android:id="@+id/action_projectsFragment_to_modifyProjectFragment"
+            app:destination="@id/modifyProjectFragment" />
+        <action
+            android:id="@+id/action_projectsFragment_to_projectDetailsFragment"
+            app:destination="@id/projectDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/modifyProjectFragment"
+        android:name="com.job.wise.presentation.project.ModifyProjectFragment"
+        android:label="{modifyTitle}"
+        tools:layout="@layout/fragment_modify_project" >
+        <action
+            android:id="@+id/action_modifyProjectFragment_to_projectsFragment"
+            app:destination="@id/projectsFragment"
+            app:popUpTo="@id/projectsFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="modifyTitle"
+            app:argType="string"
+            android:defaultValue="Add New Project" />
+        <argument
+            android:name="projectId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/projectDetailsFragment"
+        android:name="com.job.wise.presentation.project.ProjectDetailsFragment"
+        android:label="fragment_project_details"
+        tools:layout="@layout/fragment_project_details" >
+        <argument
+            android:name="projectId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyDetailsFragment"
+        android:name="com.job.wise.presentation.company.CompanyDetailsFragment"
+        android:label="fragment_company_details"
+        tools:layout="@layout/fragment_company_details" >
+        <argument
+            android:name="companyId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_companyDetailsFragment_to_modifyCompanyFragment"
+            app:destination="@id/modifyCompanyFragment" />
+        <action
+            android:id="@+id/action_companyDetailsFragment_to_assignProjectsToCompanyFragment"
+            app:destination="@id/assignProjectsToCompanyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/assignProjectsToCompanyFragment"
+        android:name="com.job.wise.presentation.company.AssignProjectsToCompanyFragment"
+        android:label="fragment_assign_projects_to_company"
+        tools:layout="@layout/fragment_assign_projects_to_company" >
+        <argument
+            android:name="companyId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/jobDetailsFragment"
+        android:name="com.job.wise.presentation.jobs.JobDetailsFragment"
+        android:label="fragment_job_details"
+        tools:layout="@layout/fragment_job_details" >
+        <argument
+            android:name="jobId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_jobDetailsFragment_to_modifyJobFragment"
+            app:destination="@id/modifyJobFragment" />
+        <argument
+            android:name="companyId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Job Wise</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="jobs_applied">Jobs Applied</string>
+    <string name="companies">Companies</string>
+    <string name="modify_company">Modify Company</string>
+    <string name="modify_job">Modify Job</string>
+    <string name="projects">Projects</string>
+    <string name="add_new_project_btn">Add New Project Button</string>
+    <string name="project_name">Project Name</string>
+    <string name="project_client">Project Client</string>
+    <string name="project_description">Project Description</string>
+    <string name="modify">Modify</string>
+    <string name="delete">Delete</string>
+    <string name="edit_project">Edit Project</string>
+    <string name="add_new_project">Add New Project</string>
+    <string name="add_new_company_btn">Add New Company Button</string>
+    <string name="rating_for_the_company">Rating For The Company</string>
+    <string name="company_name">Company Name</string>
+    <string name="save">Save</string>
+    <string name="edit_company_content_desc">Edit Company Button</string>
+    <string name="unOrAssign">(Un)Assign</string>
+    <string name="add_new_job_btn">Add New Job Button</string>
+    <string name="applied_date">Applied Date</string>
+    <string name="job_title">Job Title</string>
+    <string name="job_description">Job Description</string>
+    <string name="job_requirements">Job Requirements</string>
+    <string name="notes">Notes</string>
+    <string name="edit_job">Edit Job</string>
+    <string name="company">Company</string>
+</resources>

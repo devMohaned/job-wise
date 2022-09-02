@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.project.ProjectDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/projectTitlePlaceHolder"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="@dimen/spacing_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:text="Project Name"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"/>
+
+
+        <TextView
+            android:id="@+id/projectTitle"
+            app:layout_constraintTop_toBottomOf="@id/projectTitlePlaceHolder"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_double"
+            tools:text="Project Title"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"/>
+
+        <TextView
+            android:id="@+id/projectDescriptionPlaceHolder"
+            app:layout_constraintTop_toBottomOf="@id/projectTitle"
+            android:layout_margin="@dimen/spacing_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Project Desc"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"/>
+
+
+        <TextView
+            android:id="@+id/projectDescription"
+            app:layout_constraintTop_toBottomOf="@id/projectDescriptionPlaceHolder"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_double"
+            tools:text="Project Description"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"/>
+
+
+
+        <TextView
+            android:id="@+id/projectMadeToPlaceHolder"
+            app:layout_constraintTop_toBottomOf="@id/projectDescription"
+            android:layout_margin="@dimen/spacing_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Project Made To"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"/>
+
+
+        <TextView
+            android:id="@+id/projectMadeTo"
+            app:layout_constraintTop_toBottomOf="@id/projectMadeToPlaceHolder"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_double"
+            tools:text="Project Made To"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.company.CompanyDetailsFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/companyTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_normal"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Inova EG" />
+
+        <TextView
+            android:id="@+id/companyRatingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_normal"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+            app:layout_constraintBottom_toBottomOf="@id/companyTitleTextView"
+            app:layout_constraintStart_toEndOf="@id/companyTitleTextView"
+            app:layout_constraintTop_toTopOf="@id/companyTitleTextView"
+            tools:text="(4.5 Stars)" />
+
+        <RatingBar
+            android:id="@+id/companyRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/companyTitleTextView" />
+
+
+        <TextView
+            android:id="@+id/companyPlaceHolderProjects"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/projects"
+            android:layout_marginStart="@dimen/spacing_normal"
+            android:textAppearance="@style/TextAppearance.Material3.DisplayLarge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/companyRatingBar" />
+
+        <Button
+            android:id="@+id/companyModifyProjectsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_normal"
+            android:text="@string/modify"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/companyPlaceHolderProjects"
+            app:layout_constraintBottom_toBottomOf="@id/companyPlaceHolderProjects"
+            app:layout_constraintStart_toEndOf="@id/companyPlaceHolderProjects"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/companyRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/companyPlaceHolderProjects" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/companyEditFloatingActionBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/edit_company_content_desc"
+        app:srcCompat="@drawable/ic_edit"/>
+
+</FrameLayout>

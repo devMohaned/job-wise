@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.jobs.JobDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/jobTitlePlaceHolder"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job Title"
+            android:layout_marginStart="@dimen/spacing_normal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/jobTitle"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Information about Job Title"
+            android:layout_marginStart="@dimen/spacing_double"
+            app:layout_constraintTop_toBottomOf="@id/jobTitlePlaceHolder"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/jobDescriptionPlaceHolder"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job Description"
+            android:layout_marginStart="@dimen/spacing_normal"
+            app:layout_constraintTop_toBottomOf="@id/jobTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/jobDescription"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Information about Job Description"
+            android:layout_marginStart="@dimen/spacing_double"
+            app:layout_constraintTop_toBottomOf="@id/jobDescriptionPlaceHolder"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+        <TextView
+            android:id="@+id/jobRequirementPlaceHolder"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job Requirement"
+            android:layout_marginStart="@dimen/spacing_normal"
+            app:layout_constraintTop_toBottomOf="@id/jobDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/jobRequirement"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Information about Job Requirement"
+            android:layout_marginStart="@dimen/spacing_double"
+            app:layout_constraintTop_toBottomOf="@id/jobRequirementPlaceHolder"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+        <TextView
+            android:id="@+id/appliedDatePlaceHolder"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Applied Date"
+            android:layout_marginStart="@dimen/spacing_normal"
+            app:layout_constraintTop_toBottomOf="@id/jobRequirement"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/appliedDate"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="22/03/2022"
+            android:layout_marginStart="@dimen/spacing_double"
+            app:layout_constraintTop_toBottomOf="@id/appliedDatePlaceHolder"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+        <TextView
+            android:id="@+id/jobNotesPlaceHolder"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job Notes"
+            android:layout_marginStart="@dimen/spacing_normal"
+            app:layout_constraintTop_toBottomOf="@id/appliedDate"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/jobNotes"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Information about Job Description"
+            android:layout_marginStart="@dimen/spacing_double"
+            app:layout_constraintTop_toBottomOf="@id/jobNotesPlaceHolder"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/jobCompanyPlaceHolder"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Company"
+            android:layout_marginStart="@dimen/spacing_normal"
+            app:layout_constraintTop_toBottomOf="@id/jobNotes"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/jobCompanyName"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Information about Job Company"
+            android:layout_marginStart="@dimen/spacing_double"
+            app:layout_constraintTop_toBottomOf="@id/jobCompanyPlaceHolder"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/jobCompanyRating"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Information about Job Company"
+            android:layout_marginStart="@dimen/spacing_double"
+            android:isIndicator="true"
+            app:layout_constraintTop_toBottomOf="@id/jobCompanyName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/editJobButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="@dimen/spacing_double"
+            android:contentDescription="@string/edit_job"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
