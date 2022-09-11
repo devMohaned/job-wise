@@ -29,4 +29,6 @@
     <string name="notes">Notes</string>
     <string name="edit_job">Edit Job</string>
     <string name="company">Company</string>
+    <string name="details">Details</string>
+    <string name="assigning">Assigning</string>
 </resources>
